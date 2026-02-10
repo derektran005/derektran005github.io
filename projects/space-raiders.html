@@ -14,18 +14,77 @@
   </nav>
 
   <main>
-    <h1>Experience</h1>
-
+    <h1>Projects | Space Raiders</h1>
+    <h3>(Python/PixelPad)</h3>
+    
     <section>
-      <h2>PixelPad Tutor</h2>
+      <h2>Project Overview</h2>
       <p>
-        Designed and delivered structured lessons on programming fundamentals,
-        translating abstract concepts into interactive problem-solving exercises.
-      </p>
-      <p>
-        Emphasized debugging strategies, logical decomposition, and systems thinking.
+        Space Raiders is a top-down 2D roguelike shooter emphasizing inertia-based movement, modular weapon systems, and state-driven enemy behavior in an infinite, mapless environment.
       </p>
     </section>
+
+    <section>
+      <h2>Project Goals</h2>
+      <p>
+        The goal of this project was to explore non-traditional movement and combat mechanics by simulating space-like inertia, weapon recoil, and system-driven player decision-making.
+      </p>
+    </section>
+
+
+    <section>
+      <h2>Engineering Challenges</h2>
+      <p>
+        Balancing inertia-based movement with player control required careful tuning of acceleration, rotational velocity, damping, and weapon recoil to avoid disorientation while preserving the intended “slippery” feel.
+      </p>
+      <p>
+        Designing enemy behavior that reacts to the player’s aim during reload states required decoupling movement logic from attack logic and introducing predictive avoidance behavior.
+      </p>
+    </section>
+
+
+    <section>
+        <h2>Core Systems</h2>
+
+        <p>Movement & Physics</p>
+        <ul>
+            <li>Velocity-based movement with inertia</li>
+            <li>Gradual ship rotation toward cursor direction</li>
+            <li>Knockback forces applied by enemies and weapon recoil</li>
+        </ul>
+
+        <p>Camera System</p>
+        <ul>
+            <li>Multiple weapon archetypes (autocannon, minigun, shotgun)</li>
+            <li>Recoil and rotational velocity applied per shot</li>
+            <li>Shotgun: Charged attacks affecting weapon spread</li>
+            <li>Explosion-based secondary damage effects</li>
+        </ul>
+
+        <p>Damage System</p>
+        <ul>
+            <li>Armor-based damage mitigation</li>
+            <li>Multiple damage types interacting with enemy defenses</li>
+            <li>Ammo and weapon constraints encouraging situational swapping</li>
+        </ul>
+
+        <p>Enemy AI</p>
+        <ul>
+            <li>Advanced enemy moveemnt using positional and rotational velocities</li>
+            <li>
+              Ranged enemies with finite-state machines:
+              <li>Attack state</li>
+                <p>Pursues player and fires ranged projectiles when in range</p>
+              <li>Reload state</li>
+                <p>Evasive behavior, avoiding player's aim</p>
+            </li>
+        </ul>
+    </section>
+
+    <p>
+    This project reflects a long-term iterative development process, where new mechanics were layered onto existing systems while preserving stability and player control.
+    </p>
+
   </main>
 </body>
 </html>
